@@ -164,8 +164,6 @@ This project is open source and available under the MIT License.
 
 - Inspired by automotive testing practices at Ford Motor Company
 - Built with modern Python testing and automation tools
-- Designed for educational and research purposes in automotive software engineering
+
 
 ---
-
-**Note**: This is a simulation project for educational purposes. It does not represent actual Ford Motor Company systems or testing procedures. 
