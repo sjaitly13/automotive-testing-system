@@ -1,0 +1,143 @@
+# Configuration file for In-Vehicle Infotainment Performance Testing System
+
+# Platform Simulation Settings
+platform:
+  mode: "hybrid"  # Options: "qnx", "android", "hybrid"
+  qnx:
+    real_time_constraint: 0.016  # 60 FPS = 16ms per frame
+    priority_levels: 5
+    deterministic_timing: true
+    max_response_time: 0.100  # 100ms max response time
+  
+  android:
+    app_launch_delay: 0.500  # 500ms typical app launch delay
+    multitasking_enabled: true
+    memory_limit_mb: 2048
+    garbage_collection_interval: 5.0  # seconds
+
+# Performance Thresholds
+performance:
+  response_time:
+    excellent: 0.050  # 50ms
+    good: 0.100      # 100ms
+    acceptable: 0.200 # 200ms
+    poor: 0.500      # 500ms
+  
+  cpu_usage:
+    max_percentage: 80.0
+    warning_threshold: 60.0
+  
+  memory_usage:
+    max_percentage: 85.0
+    warning_threshold: 70.0
+  
+  frame_rate:
+    min_fps: 30.0
+    target_fps: 60.0
+
+# Test Scenarios
+test_scenarios:
+  basic_functionality:
+    duration_seconds: 300  # 5 minutes
+    operations_per_minute: 60
+  
+  stress_test:
+    duration_seconds: 600  # 10 minutes
+    operations_per_minute: 120
+    cpu_load_percentage: 90
+  
+  real_world:
+    duration_seconds: 1800  # 30 minutes
+    operations_per_minute: 45
+    include_bluetooth: true
+    include_navigation: true
+
+# Data Collection
+data_collection:
+  sampling_rate_hz: 10  # 10 samples per second
+  log_level: "INFO"     # DEBUG, INFO, WARNING, ERROR
+  save_raw_data: true
+  compression_enabled: true
+  
+  metrics:
+    - "response_time"
+    - "cpu_usage"
+    - "memory_usage"
+    - "frame_rate"
+    - "error_rate"
+    - "throughput"
+
+# Reporting
+reporting:
+  format: "html"  # Options: "html", "pdf", "json"
+  include_charts: true
+  include_recommendations: true
+  save_location: "reports/"
+  
+  charts:
+    - "performance_timeline"
+    - "resource_usage"
+    - "response_time_distribution"
+    - "error_analysis"
+
+# Machine Learning
+machine_learning:
+  enabled: true
+  model_type: "random_forest"  # Options: "random_forest", "linear_regression", "neural_network"
+  training_data_size: 1000
+  prediction_horizon_minutes: 30
+  
+  features:
+    - "cpu_usage"
+    - "memory_usage"
+    - "response_time"
+    - "operation_count"
+    - "error_rate"
+
+# Interface Settings
+interface:
+  theme: "dark"  # Options: "light", "dark", "auto"
+  window_size: "1024x768"
+  refresh_rate_hz: 30
+  
+  components:
+    media_player: true
+    navigation: true
+    settings: true
+    phone: true
+    climate: true
+
+# Automation
+automation:
+  default_delay_between_actions: 0.5  # seconds
+  max_retry_attempts: 3
+  screenshot_on_error: true
+  
+  test_sequences:
+    - name: "media_playback_test"
+      actions: ["open_media", "play_track", "change_volume", "next_track"]
+      duration: 60
+    
+    - name: "navigation_test"
+      actions: ["open_navigation", "set_destination", "start_route", "change_view"]
+      duration: 120
+    
+    - name: "settings_test"
+      actions: ["open_settings", "change_brightness", "change_volume", "change_language"]
+      duration: 90
+
+# Logging
+logging:
+  level: "INFO"
+  file_path: "logs/infotainment_test.log"
+  max_file_size_mb: 100
+  backup_count: 5
+  
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# Database
+database:
+  type: "sqlite"  
+  file_path: "data/performance_data.db"
+  auto_backup: true
+  backup_interval_hours: 24 
