@@ -1,5 +1,7 @@
 # Automated Performance Testing for In-Vehicle Infotainment System
 
+> 📸 **[View Demo Pictures & Screenshots](https://docs.google.com/document/d/1XRBvD7r6GVoHCLW532EgOkYitQonBmJys5pZEW0epbk/edit?usp=sharing)** - See the system in action with visual demonstrations!
+
 A comprehensive simulation and testing framework for automotive infotainment systems, similar to performance testing done at Ford Motor Company.
 
 ## 🚗 Project Overview
@@ -60,6 +62,35 @@ python src/automation/run_tests.py
 # Generate performance reports
 python src/analysis/generate_report.py
 ```
+
+## 🎮 Live Demo & Testing
+
+### Quick Demo Scripts
+```bash
+# Complete project showcase
+python demo_showcase.py
+
+# Core functionality test
+python working_demo.py
+
+# Simple working interface (no import issues)
+python simple_infotainment.py
+```
+
+### What You'll See
+- **Configuration System**: YAML settings loading ✅
+- **Logging System**: Structured logging with file output ✅
+- **Performance Monitoring**: Real-time CPU, memory, response time tracking ✅
+- **Data Storage**: SQLite database with performance metrics ✅
+- **Working Interface**: Full infotainment system with media, navigation, phone, climate, and settings ✅
+
+### Demo Features
+- 🚗 **Home Screen**: Quick access to all apps
+- 🎵 **Media Player**: Play/pause, volume control, track navigation
+- 🧭 **Navigation**: Destination search, map view simulation
+- 📱 **Phone**: Bluetooth connection, dialer, call controls
+- ❄️ **Climate**: Temperature control, fan speed, climate modes
+- ⚙️ **Settings**: Display, audio, system configuration tabs
 
 ## 📁 Project Structure
 
@@ -164,8 +195,6 @@ This project is open source and available under the MIT License.
 
 - Inspired by automotive testing practices at Ford Motor Company
 - Built with modern Python testing and automation tools
-- Designed for educational and research purposes in automotive software engineering
+
 
 ---
-
-**Note**: This is a simulation project for educational purposes. It does not represent actual Ford Motor Company systems or testing procedures. 
