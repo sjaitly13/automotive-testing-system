@@ -2,8 +2,7 @@
 
 > 📸 **[View Demo Pictures & Screenshots](https://docs.google.com/document/d/1XRBvD7r6GVoHCLW532EgOkYitQonBmJys5pZEW0epbk/edit?usp=sharing)** - See the system in action with visual demonstrations!
 
-A comprehensive simulation and testing framework for automotive infotainment systems, similar to performance testing done at Ford Motor Company.
-
+A comprehensive simulation and testing framework for automotive infotainment systems, similar to performance testing at automotive companies. 
 ## 🚗 Project Overview
 
 This project simulates an in-vehicle infotainment system and provides automated performance testing capabilities to analyze system behavior under various conditions. It's designed to demonstrate automotive software testing concepts including real-time constraints, multi-device interactions, and performance monitoring.
